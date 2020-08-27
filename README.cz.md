@@ -11,8 +11,6 @@ Závěrečný projekt do mého předmětu [URO], psán v C++ s využitím Qt.
   >*Použil jsem [Qt Creater](https://www.qt.io/) jako IDE s kompilátorem MinGw.*<br />
   >*Další informace vysvětlí, jak si připravit IDE a kompilátor, tak jak to mám já.*
 
-  >*Poznámka: Místo MinGw se může použít MSVC.*
-
 ### C++/Qt
 * Ujisti se, že máš [Qt Creator](https://www.qt.io/) nainstalován s kompilátorem MinGw.
  
@@ -48,7 +46,7 @@ Závěrečný projekt do mého předmětu [URO], psán v C++ s využitím Qt.
 
 * Po otevření projektu v Qt Creator si nastav projekt.
 
-    >*Použij MinGw, nebo Msvc*
+    >*Použij MinGw*
 
 * Spusť projekt
 
