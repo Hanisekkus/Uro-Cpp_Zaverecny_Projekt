@@ -11,8 +11,6 @@ Final project to succesfull finish subject [URO] written in C++ with use of Qt.
   >*I used [Qt Creater](https://www.qt.io/) as IDE with MinGw as compiler.*<br />
   >*So information below will tell you, how to setup it same way as I did.*
 
-  >*Note: You can use MSVC instead of MinGw.*
-
 ### C++/Qt
 * Make sure you have installed [Qt Creator](https://www.qt.io/) with MinGw.
  
@@ -49,7 +47,7 @@ Final project to succesfull finish subject [URO] written in C++ with use of Qt.
 
 * After opening project in Qt Creator configure project.
 
-    >*Use MinGw or Msvc*
+    >*Use MinGw*
 
 * Run the project
 
