@@ -1,0 +1,18 @@
+<RCC>
+    <qresource prefix="/myResources">
+        <file>img/bookIcon - kopie-zaloha.png</file>
+        <file>img/bookIcon.png</file>
+        <file>img/bookIcon-zaloha.png</file>
+        <file>img/hideL.png</file>
+        <file>img/hideR.png</file>
+        <file>img/icon.png</file>
+        <file>img/radioButton.png</file>
+        <file>img/radioButtonFilled.png</file>
+        <file>img/searchField.png</file>
+        <file>img/searchFieldLight.png</file>
+        <file>img/showL.png</file>
+        <file>img/showR.png</file>
+        <file>img/slideLSide.png</file>
+        <file>img/slideRSide.png</file>
+    </qresource>
+</RCC>

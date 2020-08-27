@@ -41,7 +41,7 @@ App::App(QWidget *parent)
 
     // -- user Picture,, clickable (to show menu)
     this->_userPic = new myLabel( this->_firstWindow );
-    QPixmap pic("../img/icon.png");
+    QPixmap pic(":myResources/img/icon.png");
     this->_userPic->setPixmap( pic );
     this->_userPic->setCursor( QCursor( Qt::PointingHandCursor ) );
     this->_userPic->setGeometry( 1400, 7, 32, 32 );
@@ -57,7 +57,7 @@ App::App(QWidget *parent)
 
     // -- menu switcher for dark/light mode,, clickable
     this->_switchDL = new myLabel( this->_menu );
-    pic.load("../img/slideLSide.png");
+    pic.load(":myResources/img/slideLSide.png");
     this->_switchDL->setPixmap( pic );
     this->_switchDL->setCursor( QCursor( Qt::PointingHandCursor ) );
     this->_switchDL->setGeometry( 170, 10, 64, 32 );
@@ -86,7 +86,7 @@ App::App(QWidget *parent)
 
     // -- Radio button to owned,, clickable
     this->_ownedPic = new myLabel( this->_firstWindow );
-    pic.load("../img/radioButton.png");
+    pic.load(":myResources/img/radioButton.png");
     this->_ownedPic->setPixmap( pic );
     this->_ownedPic->setCursor( QCursor( Qt::PointingHandCursor ) );
     this->_ownedPic->setGeometry( 200, 177, 20, 50 );
@@ -139,7 +139,7 @@ App::App(QWidget *parent)
     int counter = 0;
     for( int i = 0; i < this->_booksTitle.length(); i ++ ){
         // -- Book picture,, clickable
-        pic.load("../img/bookIcon.png");
+        pic.load(":myResources/img/bookIcon.png");
         this->_booksLabel.push_back( new myLabel( this->_firstWindow ) );
         this->_booksLabel.at( i )->setPixmap( pic );
         this->_booksLabel.at( i )->setCursor( QCursor( Qt::PointingHandCursor ) );
@@ -186,7 +186,7 @@ App::App(QWidget *parent)
     this->_getBack->setGeometry( 60, 800, 150, 50 );
 
     // -- Button to hide/show left panel
-    pic.load("../img/hideL.png");
+    pic.load(":myResources/img/hideL.png");
     this->_lPanelMove = new myLabel( this->_secondWindow );
     this->_lPanelMove->setPixmap( pic );
     this->_lPanelMove->setCursor( QCursor( Qt::PointingHandCursor ) );
@@ -213,7 +213,7 @@ App::App(QWidget *parent)
     this->_rPanel->setGeometry( 1140, 0, 300, 900 );
 
     // -- Button to hide/show right panel
-    pic.load("../img/hideR.png");
+    pic.load(":myResources/img/hideR.png");
     this->_rPanelMove = new myLabel( this->_secondWindow );
     this->_rPanelMove->setPixmap( pic );
     this->_rPanelMove->setCursor( QCursor( Qt::PointingHandCursor ) );
@@ -395,13 +395,13 @@ void App::_setMapping()
 void App::_clickedElement( int pos ){ //! slot function
     switch( pos ){
     case 0: {
-        QPixmap pic( ( this->_isOwned? "../img/radioButton.png": "../img/radioButtonFilled.png") );
+        QPixmap pic( ( this->_isOwned? ":myResources/img/radioButton.png": ":myResources/img/radioButtonFilled.png") );
         this->_ownedPic->setPixmap( pic );
         this->_isOwned = !this->_isOwned;
         break;
     }
     case 1: {
-        QPixmap pic( ( this->_isBuyout? "../img/radioButton.png": "../img/radioButtonFilled.png") );
+        QPixmap pic( ( this->_isBuyout? ":myResources/img/radioButton.png": ":myResources/img/radioButtonFilled.png") );
         this->_buyoutPic->setPixmap( pic );
         this->_isBuyout = !this->_isBuyout;
         break;
@@ -426,7 +426,7 @@ void App::_clickedElement( int pos ){ //! slot function
         break;
     }
     case 13:{
-        QPixmap pic( ( this->_isDark? "../img/slideRSide.png": "../img/slideLSide.png") );
+        QPixmap pic( ( this->_isDark? ":myResources/img/slideRSide.png": ":myResources/img/slideLSide.png") );
         this->_isDark = !this->_isDark;
         this->_darkLight->setText( this->_isDark? "Tmavý režim": "Světlý režim" );
         this->_switchDL->setPixmap( pic );
@@ -444,7 +444,7 @@ void App::_clickedElement( int pos ){ //! slot function
         this->_isLPanel ? this->_lPanel->hide(): this->_lPanel->show();
         this->_isLPanel ? this->_lPanelMove->setGeometry( 0, 50, 32, 32 )
                         : this->_lPanelMove->setGeometry( 300, 50, 32, 32 );
-        QPixmap pic( ( this->_isLPanel? "../img/showL.png": "../img/hideL.png") );
+        QPixmap pic( ( this->_isLPanel? ":myResources/img/showL.png": ":myResources/img/hideL.png") );
         this->_lPanelMove->setPixmap( pic );
         this->_isLPanel = !this->_isLPanel;
 
@@ -454,7 +454,7 @@ void App::_clickedElement( int pos ){ //! slot function
         this->_isRPanel ? this->_rPanel->hide(): this->_rPanel->show();
         this->_isRPanel ? this->_rPanelMove->setGeometry( 1408, 50, 32, 32 )
                         : this->_rPanelMove->setGeometry( 1108, 50, 32, 32 );
-        QPixmap pic( ( this->_isRPanel? "../img/showR.png": "../img/hideR.png") );
+        QPixmap pic( ( this->_isRPanel? ":myResources/img/showR.png": ":myResources/img/hideR.png") );
         this->_rPanelMove->setPixmap( pic );
         this->_isRPanel = !this->_isRPanel;
         break;
@@ -475,7 +475,7 @@ void App::_setBack()
     this->_firstWindow->show();
     this->_isRPanel = true;
     this->_rPanel->show();
-    QPixmap pic( "../img/hideR.png" );
+    QPixmap pic( ":myResources/img/hideR.png" );
     this->_rPanelMove->setPixmap( pic );
     this->_chapUnderline->setGeometry( 86, 267, 52, 10 );
 
